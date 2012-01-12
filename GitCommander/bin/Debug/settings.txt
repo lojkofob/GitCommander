@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <git_path>C:\Program Files (x86)\Git</git_path>
+  <working_dir>C:\Users\shpengler\Desktop\git\GitCommander</working_dir>
+  <text1>pull
+push
+status</text1>
+  <text2>pull origin master</text2>
+  <text3>init
+add .
+commit
+remote add GitCommander https://github.com/lojkofob/GitCommander.git
+push
+</text3>
+  <text4>push</text4>
+</Settings>
