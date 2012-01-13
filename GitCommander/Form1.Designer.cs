@@ -33,8 +33,6 @@
             this.workingdir = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.commitname = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,7 +41,6 @@
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -93,28 +90,11 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // commitname
-            // 
-            this.commitname.Location = new System.Drawing.Point(91, 64);
-            this.commitname.Name = "commitname";
-            this.commitname.Size = new System.Drawing.Size(331, 20);
-            this.commitname.TabIndex = 9;
-            this.commitname.Text = "commit_name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Commit_name";
-            // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 115);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 90);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(239, 61);
+            this.richTextBox1.Size = new System.Drawing.Size(239, 86);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -141,9 +121,9 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(257, 115);
+            this.richTextBox2.Location = new System.Drawing.Point(257, 90);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(236, 61);
+            this.richTextBox2.Size = new System.Drawing.Size(236, 86);
             this.richTextBox2.TabIndex = 15;
             this.richTextBox2.Text = "";
             this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
@@ -186,27 +166,16 @@
             this.richTextBox4.Text = "";
             this.richTextBox4.TextChanged += new System.EventHandler(this.richTextBox4_TextChanged);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(428, 62);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(68, 49);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "PULL ADD COMMIT PUSH";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button4_Click);
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 90);
+            this.textBox1.Location = new System.Drawing.Point(15, 64);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(333, 20);
+            this.textBox1.Size = new System.Drawing.Size(401, 20);
             this.textBox1.TabIndex = 22;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(351, 88);
+            this.button6.Location = new System.Drawing.Point(422, 61);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(71, 23);
             this.button6.TabIndex = 23;
@@ -232,7 +201,6 @@
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.button4);
@@ -241,8 +209,6 @@
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.commitname);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.workingdir);
@@ -265,8 +231,6 @@
         private System.Windows.Forms.TextBox workingdir;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox commitname;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button1;
@@ -275,7 +239,6 @@
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;

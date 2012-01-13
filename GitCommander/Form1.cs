@@ -23,7 +23,7 @@ namespace GitCommander
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            settings = Settings.Load(Application.StartupPath + "\\settings.txt");
+            settings = Settings.Load("settings.txt");
             gitpath.Text = settings.git_path;
             workingdir.Text = settings.working_dir;
            richTextBox1.Text = settings.text1;
@@ -52,9 +52,7 @@ namespace GitCommander
         {
             List<string> coms = git_command.Split('\n').ToList<string>();
             for (int i = 0; i < coms.Count; i++)
-            {
-                if (coms[i] == "commit") { commit(); coms[i] = "status"; }
-                coms[i] = "\"" + settings.git_path + "\\bin\\git\" " + coms[i] + "\"\"";    }
+            {   coms[i] = "\"" + settings.git_path + "\\bin\\git\" " + coms[i] + "\"\"";    }
             Exec(coms);
         }
 
@@ -99,20 +97,6 @@ namespace GitCommander
             this.Close();
         }
 
-        private void commit()
-        {
-            if (commitname.Text.Length < 3) MessageBox.Show("Enter CommitName please!!");
-            else
-            {
-                Exec("commit -a -m \"" + commitname.Text + "\"");
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Exec("pull");
-            commit();
-        }
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -180,6 +164,7 @@ namespace GitCommander
         public string text4 = "";
         public void Save(string file)
         {
+            file = Application.StartupPath + "\\" + file;
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(Settings));
@@ -187,11 +172,12 @@ namespace GitCommander
                 serializer.Serialize(sw, this);
                 sw.Close();
             }
-            catch (Exception ee)            {         MessageBox.Show(ee.Message);         }
+            catch (Exception ee)            {   MessageBox.Show(ee.Message);   }
         }
 
         public static Settings Load(string file)
         {
+            file = Application.StartupPath + "\\" + file;
             try
             {
                 StreamReader sr = new StreamReader(file);
